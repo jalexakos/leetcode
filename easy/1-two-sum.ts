@@ -8,6 +8,8 @@ function twoSum(nums: number[], target: number): number[] {
 
         if (otherVal > -1 && otherVal !== val) return [val, otherVal];
     }
+
+    return [-1, -1]
 };
 
 // runtime 5th percentile
