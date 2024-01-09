@@ -21,3 +21,30 @@ function searchInsert(nums: number[], target: number): number {
 
 // runtime 52th percentile
 // memory 37th percentile
+
+function searchInsertMemOp(nums: number[], target: number): number {
+    if (nums.length === 1){
+        if (nums[0] < target) return 1;
+        return 0;
+    }
+
+    let l = 0;
+    let r = nums.length - 1;
+    let i = 0;
+
+    while (l <= r){
+        i = Math.floor((r + l) / 2);
+
+        if (nums[i] === target) return i;
+        else if (nums[i] < target){
+            l = i + 1;
+        } else {
+            r = i - 1;
+        }
+    }
+    
+    return l;
+};
+
+// runtime 97.45th percentile
+// memory 90.56th percentile
