@@ -41,3 +41,6 @@ function searchInsert(nums: number[], target: number): number {
     
     return leftPointer;
 };
+
+// runtime 52th percentile
+// memory 37th percentile
