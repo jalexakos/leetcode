@@ -25,3 +25,26 @@ function isValid(s: string): boolean {
 
 // runtime 46th percentile
 // memory 85th percentile
+
+function isValidMemOp(s: string): boolean {
+    const m: StringObject = {
+        "(": ")",
+        "[": "]",
+        "{": "}"
+    };
+
+    let l = [];
+    for (let c = 0; c < s.length; c++){
+        if (m[s[c]]){
+            l.push(m[s[c]]);
+        } else {
+            if (s[c] !== l[l.length - 1]) return false;
+            l.pop();
+        }
+    }
+
+    return l.length === 0;
+};
+
+// runtime 46th percentile
+// memory 97th percentile
