@@ -5,7 +5,7 @@ function mySqrt(x: number): number {
         if (i * i === x){
             return i;
         }
-        else if (i * i > x && i > 0){
+        else if (i * i > x){
             return i - 1
         }
     }
@@ -13,5 +13,5 @@ function mySqrt(x: number): number {
     return 0
 };
 
-// runtime 11th percentile
-// memory 7th percentile
+// runtime 17th percentile
+// memory 46th percentile
