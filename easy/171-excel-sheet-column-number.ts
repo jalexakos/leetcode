@@ -38,5 +38,5 @@ function titleToNumber(columnTitle: string): number {
     return total;
 };
 
-// runtime 32 percentile
+// runtime 32nd percentile
 // memory 36th percentile
