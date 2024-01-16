@@ -29,25 +29,27 @@ const alphabetObject: Record<number, string> = {
     26: 'Z',
   };
 
-  function convertToTitle(columnNumber: number): string {
+function convertToTitle(columnNumber: number): string {
     if (columnNumber <= 26){
         return alphabetObject[columnNumber];
     }
     let columnTitle = '';
-    // let copyNum = columnNumber;
-    let letters = 0;
-    while (Math.floor(columnNumber / 26 ** letters) > 26){
-        letters++;
-        // copyNum = ;
-    }
 
-    if (columnNumber % 26 !== 0){
-        letters++;
-        columnTitle += alphabetObject[columnNumber % 26];
+    while (columnNumber > 0){
+            if (columnNumber % 26 !== 0){
+                columnTitle = alphabetObject[columnNumber % 26] + columnTitle;
+                columnNumber = Math.floor(columnNumber / 26);
+            } else if (columnNumber % 26 === 0 && columnNumber > 26){
+                columnTitle = "Z" + columnTitle;
+                columnNumber = Math.floor((columnNumber - 26) / 26);
+            } else {
+                columnTitle = "Z" + columnTitle;
+                columnNumber = 0;
+            }
     }
-    console.log('letters', letters);
 
     return columnTitle;
 };
 
-// Didn't finish - revisit
+// runtime 72nd percentile
+// memory 22nd percentile
