@@ -30,3 +30,24 @@ function singleNumber(nums: number[]): number {
 // O(n) runtime
 // O(1) memory
 // I could not figure out a solution that abides by these restraints. I will have to research how to do that.
+
+// UPDATE: I used ChatGPT to find a solution that abided the constraints. It was much more niche than I expected.
+// See below.
+
+function singleNumberOpt(nums: number[]): number {
+    let result = 0;
+ 
+     for (let num of nums) {
+         // XOR operation
+         result ^= num;
+     }
+ 
+     return result;
+ };
+
+// runtime 85th percentile
+// memory 61st percentile
+
+// This solution leverages the XOR operator, one I was not familiar with. I don't fully understand it,
+// but I will try to read it on it more.
+// MDN Dos here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR
