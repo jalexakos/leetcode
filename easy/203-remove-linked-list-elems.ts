@@ -1,3 +1,5 @@
+// from https://leetcode.com/problems/remove-linked-list-elements/description/
+
 // Definition for singly-linked list can be found in easy/206-reverse-linked-list.ts
  
 function removeElements(head: ListNode | null, val: number): ListNode | null {
