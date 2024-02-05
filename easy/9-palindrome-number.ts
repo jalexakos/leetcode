@@ -1,6 +1,6 @@
 // from https://leetcode.com/problems/palindrome-number/description/
 
-function isPalindrome(x: number): boolean {
+function isPalindromeNum(x: number): boolean {
     let numAsString = String(x);
     let reversedString = numAsString.split('').reverse().join('');
 
