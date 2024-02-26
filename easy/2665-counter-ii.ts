@@ -42,7 +42,7 @@ type Counter = {
     reset: () => number,
 }
 
-function createCounter(init: number): Counter {
+function createCounterII(init: number): Counter {
   let count = init;
 
   return {
@@ -59,7 +59,7 @@ function createCounter(init: number): Counter {
   };
 };
 
-let counter = createCounter(7);
+let counter = createCounterII(7);
 console.log(counter.increment()); // 8
 console.log(counter.decrement()); // 7
 console.log(counter.increment()); // 8
