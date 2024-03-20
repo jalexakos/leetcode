@@ -35,3 +35,6 @@ function cancellable(fn: FnTimeoutCancellation, args: JSONValueTimeoutCancellati
  *      console.log(result); // [{"time":20,"returned":10}]
  *  }, maxT + 15)
  */
+
+// runtime 98th percentile
+// memory 66th percentile
