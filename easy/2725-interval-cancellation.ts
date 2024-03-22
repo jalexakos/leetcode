@@ -3,7 +3,7 @@
 type JSONValueIntervalCancel = null | boolean | number | string | JSONValueIntervalCancel[] | { [key: string]: JSONValueIntervalCancel };
 type FnIntervalCancel = (...args: JSONValueIntervalCancel[]) => void
 
-function cancellable(fn: FnIntervalCancel, args: JSONValueIntervalCancel[], t: number): Function {
+function cancellableInt(fn: FnIntervalCancel, args: JSONValueIntervalCancel[], t: number): Function {
     fn(...args);
     let interval = setInterval(() => fn(...args), t);;
 
