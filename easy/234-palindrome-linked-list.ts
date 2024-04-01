@@ -2,7 +2,7 @@
 
 // Definition for singly-linked list can be found in easy/206-reverse-linked-list.ts
 
-function isPalindrome(head: ListNode | null): boolean {
+function isPalindromeLinkedList(head: ListNode | null): boolean {
     let list = [];
     while (head) {
         list.push(head.val);
