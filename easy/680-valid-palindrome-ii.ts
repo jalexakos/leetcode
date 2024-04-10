@@ -7,7 +7,7 @@ function validPalindrome(s: string): boolean {
 
     while (left <= right) {
         if (s[left] !== s[right]) {
-            return isPalindrome(s, left + 1, right) || isPalindrome(s, left, right - 1);
+            return isPalindromeValid(s, left + 1, right) || isPalindromeValid(s, left, right - 1);
         }
         left++;
         right--;
@@ -16,7 +16,7 @@ function validPalindrome(s: string): boolean {
     return true;
 }
 
-function isPalindrome(s: string, start: number, end: number): boolean {
+function isPalindromeValid(s: string, start: number, end: number): boolean {
     while (start <= end) {
         if (s[start] !== s[end]) {
             return false;
