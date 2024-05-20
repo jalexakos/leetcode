@@ -1,6 +1,6 @@
 // from https://leetcode.com/problems/distribute-candies-to-people/description/
 
-function distributeCandies(candies: number, num_people: number): number[] {
+function distributeCandiesToPeople(candies: number, num_people: number): number[] {
     let arr = Array(num_people).fill(0);
 
     let candy = 1;
