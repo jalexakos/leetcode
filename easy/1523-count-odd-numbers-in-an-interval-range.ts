@@ -13,3 +13,15 @@ function countOdds(low: number, high: number): number {
 
 // runtime 34th percentile
 // memory 64th percentile
+
+function countOddsOpt(low: number, high: number): number {
+    let count = (high - low) / 2;
+    if ((high - low) % 2 === 0) {
+        if (high % 2 !== 0) return count + 1;
+    }
+    
+    return Math.ceil(count);
+};
+
+// runtime 79th percentile
+// memory 65th percentile
