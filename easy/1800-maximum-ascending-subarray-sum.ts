@@ -34,3 +34,30 @@ function maxAscendingSum(nums: number[]): number {
 
 // runtime 60th percentile
 // memory 5th percentile
+
+// I thought I could improve upon my original performance, so I tried a different approach. This one was much more optimal.
+
+function maxAscendingSumOpt(nums: number[]): number {
+    let largeSum = nums[0];
+    let l = 0;
+    let r = 1;
+    let sum = nums[l];
+    while (r < nums.length) {
+        
+        if (nums[r] > nums[r - 1]) {
+            sum += nums[r];
+            r++;
+            if (sum > largeSum) largeSum = sum;
+        } else {
+            if (sum > largeSum) largeSum = sum;
+            l = r;
+            r++;
+            sum = nums[l];
+        }
+    }
+
+    return largeSum;
+};
+
+// runtime 100th percentile
+// memory 43rd percentile
