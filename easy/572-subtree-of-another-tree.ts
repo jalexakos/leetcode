@@ -38,3 +38,6 @@ function isSameTree(treeOne: TreeNode | null, treeTwo: TreeNode | null): boolean
 
     return isSameTree(treeOne?.left!, treeTwo?.left!) && isSameTree(treeOne?.right!, treeTwo?.right!);
 }
+
+// runtime 24th percentile
+// memory 52nd percentile
